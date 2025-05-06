@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1"
+      author: "Mehul"
+      runOnChange: true
+      sqlFile:
+        path: "db/migration/Products_Master_Table_Creation_ddl.sql"
+
+  - changeSet:
+      id: "2"
+      author: "Mehul"
+      runOnChange: true
+      sqlFile:
+        path: "db/migration/Products_Master_Data_Insertion.sql"

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: E-Commerce
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/e-commerce
+    username: postgres
+    password: postgres
+
+#  datasource:
+#    url: jdbc:h2:mem:e_commerce;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+    contexts: default
+    default-schema: public
+    database-change-log-lock-table: DATABASECHANGELOGLOCK
+    database-change-log-table: DATABASECHANGELOG
+
+mehul:
+  openapi:
+    dev-url: http://localhost:8080
+
+
